@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Karnataka State Police</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main_css.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+          <div class="login100-pic">
+              <img src="images/img-01.png" alt="IMG">
+            </div>
+            
+				<div class="pad">
+						<center>Karnataka State Police</center>
+						<center>ಕರ್ನಾಟಕ ರಾಜ್ಯ ಪೊಲೀಸ್</center>	
+        </div>
+        
+        <div class= photobox>
+            <div>
+                <p> <font color="white"> yo </font></p>
+            </div>
+            <div id="preview" style="width: 500px; height: auto;"></div><br>
+            <input id="browse" type="file" onchange="previewFiles()" multiple>
+        <div>
+            <p> <font color="white"> yo </font></p>
+        </div>
+        <b><p align="left">Tolorence :</p></b>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+          </div>
+        </div>
+
+				<form method="post" enctype="multipart/form-data" class="login100-form validate-form" action="myform.cgi">
+					<span class="login100-form-title">
+              <b>Search Option</b>
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Check atleast one field">
+              <b><p align="center">Database</p></b>
+						<input class="input100" type="checkbox" name="Database" placeholder="Database" value="Database"> 
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-database" aria-hidden="true"></i>
+						</span>
+          </div>
+          
+          <div class="wrap-input100 validate-input" data-validate = "Check atleast one field">
+              <b><p align="center">Google</p></b>
+              <input class="input100" type="checkbox" name="Google" placeholder="Google" value="Google">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-google" aria-hidden="true"></i>
+              </span>
+            </div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Check atleast one field">
+              <b><p align="center">Facebook</p></b>
+              <input class="input100" type="checkbox" name="Facebook" placeholder="Facebook" value="Facebook">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </span>
+            </div>
+<!-- 
+            <select class="selectDrop" name="" id="" style="padding-left:0px;">
+                <option value="">Around Metro Manila Only</option>
+                <option value="">Outside Metro Manila Only</option>
+                <option value="">Both</option>
+            </select> -->
+
+          <div class="wrap-input100 validate-input" data-validate = "Check atleast one field">
+              <b><p align="center">Instagram</p></b>
+              <input class="input100" type="checkbox" name="Instagram" placeholder="Instagram" value="Instagram">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </span>
+            </div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Check atleast one field">
+              <b><p align="center">Twitter</p></b>
+              <input class="input100" type="checkbox" name="Twitter" placeholder="Twitter" value="Twitter">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </span>
+            </div>
+
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" formaction="third.html">
+							Submit
+						</button>
+          </div>
+          
+          <div class="container-login100-form-btn">
+              <button type="reset" value="reset "class="login100-form-btn">
+                Reset
+              </button>
+            </div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value; // Display the default slider value
+
+      // Update the current slider value (each time you drag the slider handle)
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+function previewFiles() {
+
+var preview = document.querySelector('#preview');
+var files   = document.querySelector('input[type=file]').files;
+
+function readAndPreview(file) {
+
+  // Make sure `file.name` matches our extensions criteria
+  if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+    var reader = new FileReader();
+
+    reader.addEventListener("load", function () {
+      var image = new Image();
+      image.height = 100;
+      image.title = file.name;
+      image.src = this.result;
+      preview.appendChild( image );
+    }, false);
+
+    reader.readAsDataURL(file);
+  }
+
+}
+
+if (files) {
+  [].forEach.call(files, readAndPreview);
+}
+
+}
+	</script>
+<!--===============================================================================================-->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
